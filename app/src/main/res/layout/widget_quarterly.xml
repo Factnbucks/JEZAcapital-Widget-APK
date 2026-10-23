@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@drawable/bg_widget">
+
+    <!-- Header: brand (left) + running session (right) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="JEZAcapital"
+            android:textColor="#69F0AE"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW YORK AM"
+            android:textColor="#FFC107"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- New York digital clock -->
+    <TextClock
+        android:id="@+id/tc_clock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:format12Hour="HH:mm:ss"
+        android:format24Hour="HH:mm:ss"
+        android:timeZone="America/New_York"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed" />
+    <TextClock
+        android:id="@+id/tc_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:format12Hour="EEE d MMM  &#8226;  'New York'  z"
+        android:format24Hour="EEE d MMM  &#8226;  'New York'  z"
+        android:timeZone="America/New_York"
+        android:textColor="#A5D6A7"
+        android:textSize="12sp" />
+
+    <!-- Current quarter + remaining time -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_quarter_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Q1 ends in"
+            android:textColor="#C8E6C9"
+            android:textSize="14sp" />
+        <Chronometer
+            android:id="@+id/ch_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFC107"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed" />
+    </LinearLayout>
+
+    <!-- Four 90-minute quarters -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/q1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="3dp"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="Q1&#10;00:00"
+            android:textColor="#A5D6A7"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_quarter" />
+        <TextView
+            android:id="@+id/q2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="Q2&#10;01:30"
+            android:textColor="#A5D6A7"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_quarter" />
+        <TextView
+            android:id="@+id/q3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="Q3&#10;03:00"
+            android:textColor="#A5D6A7"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_quarter" />
+        <TextView
+            android:id="@+id/q4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="Q4&#10;04:30"
+            android:textColor="#A5D6A7"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_quarter" />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal"
+        android:background="#1B4D32" />
+
+    <!-- BIAS CHECKLIST -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:text="BIAS CHECKLIST"
+            android:textColor="#A5D6A7"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="BUY"
+            android:textColor="#00E676"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="SELL"
+            android:textColor="#FF5252"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:text="H4 VWAP trend"
+                android:textColor="#C8E6C9"
+                android:textSize="12sp"  />
+            <TextView
+                android:id="@+id/b_h4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; BUY"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/s_h4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; SELL"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:text="H1 VWAP trend"
+                android:textColor="#C8E6C9"
+                android:textSize="12sp"  />
+            <TextView
+                android:id="@+id/b_h1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; BUY"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/s_h1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; SELL"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:text="Now (5) VWAP"
+                android:textColor="#C8E6C9"
+                android:textSize="12sp"  />
+            <TextView
+                android:id="@+id/b_now"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; BUY"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/s_now"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; SELL"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:text="ADX/DMI 5m"
+                android:textColor="#C8E6C9"
+                android:textSize="12sp"  />
+            <TextView
+                android:id="@+id/b_adx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; BUY"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/s_adx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; SELL"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    <TextView
+        android:id="@+id/tv_adx_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#6FA283"
+        android:textSize="10sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:text="Score"
+                android:textColor="#C8E6C9"
+                android:textSize="12sp" android:textStyle="bold" />
+            <TextView
+                android:id="@+id/b_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; BUY"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/s_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="&#9675; SELL"
+                android:textColor="#4F7A60"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Fetching gold data..."
+        android:textColor="#6FA283"
+        android:textSize="10sp" />
+</LinearLayout>
